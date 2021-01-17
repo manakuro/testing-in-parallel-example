@@ -17,7 +17,7 @@ jobs:
       - run:
           command: |
             mkdir -p test-results/jest
-            yarn test:unit:ci
+            yarn test:ci
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
       - store_test_results:
