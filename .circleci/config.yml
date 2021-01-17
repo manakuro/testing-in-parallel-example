@@ -19,7 +19,7 @@ jobs:
           command: |
             mkdir -p test-results/jest
 
-            TEST=$(circleci tests glob **/*.test.ts | circleci tests split --split-by=timings)
+            TEST=$(circleci tests glob src/**/*.test.ts | circleci tests split --split-by=timings)
 
             yarn test:ci $TEST
           environment:
