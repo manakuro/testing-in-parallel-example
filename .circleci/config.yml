@@ -14,4 +14,13 @@ jobs:
           key: v2-dependencies-{{ checksum "package.json" }}
           paths:
             - node_modules
-      - run: yarn test
+      - run:
+          command: |
+            mkdir -p test-results/jest
+            yarn test:unit:ci
+          environment:
+            JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
+      - store_test_results:
+          path: test-results
+      - store_artifacts:
+          path: test-results
