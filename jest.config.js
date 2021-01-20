@@ -9,8 +9,4 @@ module.exports = {
   testMatch: testMatch(),
   testPathIgnorePatterns: ['/node_modules/'],
   transformIgnorePatterns: ['/node_modules/'],
-
-  "jest-junit": {
-    "addFileAttribute": true
-  },
 }
