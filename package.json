@@ -8,6 +8,7 @@
     "start": "next start",
     "test:unit": "jest",
     "test:integration": "INTEGRATION=true jest",
+    "test:integration:ci": "INTEGRATION=true jest",
     "test:ci": "jest --ci"
   },
   "dependencies": {
