@@ -11,6 +11,6 @@ module.exports = {
   transformIgnorePatterns: ['/node_modules/'],
 
   "jest-junit": {
-    "addFileAttribute": "true"
+    "addFileAttribute": true
   },
 }
