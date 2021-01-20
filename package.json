@@ -8,7 +8,7 @@
     "start": "next start",
     "test:unit": "jest",
     "test:integration": "INTEGRATION=true jest",
-    "test:integration:ci": "INTEGRATION=true jest",
+    "test:integration:ci": "INTEGRATION=true jest --ci --reporters=default --reporters=jest-junit --maxWorkers=4",
     "test:ci": "jest --ci"
   },
   "dependencies": {
