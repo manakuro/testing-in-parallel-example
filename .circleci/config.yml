@@ -18,7 +18,7 @@ jobs:
       - run:
           command: |
             mkdir -p test-results/jest
-            TEST=$(circleci tests glob src/**/*.test.js | circleci tests split --split-by=timings)
+            TEST=$(circleci tests glob src/**/*.intg.js | circleci tests split --split-by=timings)
             yarn test:ci $TEST
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
